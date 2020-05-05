@@ -1,8 +1,9 @@
-csv_file = open("nyufollowers.csv", "r")
+csv_file = open("followers_part2.csv", "r")
 csv_file.readline()
 
-words = ["NYU", "nyu", "NYU Abu Dhabi", "New York University Abu Dhabi", "nyuad", "NYUAD"]
+# words = ["Harvard", "harvard", "HarvardU"]
 # words2 = ["harvard", "Harvard"]
+words = ["Stanford ", "stanford "]
 filter_words = ["Lecturer","Professor","Instructor", "Faculty", "faculty", "professor", "instructor","professor", "lecturer"]
 users = []
 filtered = True
@@ -24,7 +25,7 @@ for line in csv_file:
 print(users)
 print(len(users))
 
-nyu_users = open("nyu_users2.csv", "w+")
+nyu_users = open("stanford_users.csv", "w+")
 for user in users:
     line = ",".join(user)
     nyu_users.write(line)
